@@ -1,0 +1,40 @@
+<link href="popup.css" rel="stylesheet" type="text/css" />
+<script type="module" src="popup.js"></script>
+
+<div class="container" id="loggedOut">
+  <div>
+    <div class="title">Xohoz</div>
+
+    <div class="loginContainer">
+      <div class="loginPrimary" id="loginPrimary">
+        <button class="loginBtn" id="loginButton">Login Now </button>
+        OR
+        <a class="loginBtn" href="">Register Now </a>
+      </div>
+      <div class="loginSecondary hidden" id="loginSecondary">
+        <input type="text" placeholder="Email" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <button  class="loginBtn" id="loginBackend" > Login Now </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="loggedIn">
+  <div id="printable">
+    <!-- <h2 id="heading" contenteditable="true">Enter to add title</h2> -->
+    <div>
+      <div class="title">
+        <h3>Xohoj</h3>
+      </div>
+      <!-- <h3 id="subTitle" contenteditable="true"> Enter Subtitle</h3> -->
+      <div class="title">Your bookmarks for this video</div>
+
+      <div class="bookmarks" id="bookmarks"></div>
+    </div>
+  </div>
+  <footer>
+    <!-- <button  >Print</button> -->
+    <button class="button-31" id="printButton" role="button">Export PDF</button>
+  </footer>
+</div>
