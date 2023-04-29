@@ -1,3 +1,35 @@
+/* .loginContainer{ */
+  /* border: 1px solid red; */
+  /* height: 60vh; */
+/* } */
+.loginPrimary{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.loginSecondary{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.loginSecondary input{
+  margin: 5px;
+}
+
+.loginBtn{
+  margin: 10px auto;
+  text-decoration: none;
+  background-color: dodgerblue;
+  color: #fff;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
     width: 280px;
     color: #314d3e;
@@ -11,6 +43,21 @@
     font-size: 14px;
     font-weight: bold;
     padding: 8px;
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-between;
+  }
+
+  .titleVideo{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  #logoutImg{
+    width: 20px;
+    height: 20px;
   }
   
   .textbox {
@@ -107,6 +154,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
+    margin-bottom: 5px;
   }
   
   .button-31:hover,
