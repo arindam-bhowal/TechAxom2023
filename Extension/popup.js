@@ -84,10 +84,17 @@ const viewBookmarks = (currentBookmarks = []) => {
 const onPlay = async (e) => {
   const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
 
-  chrome.tabs.sendMessage(activeTab.id, {
+  const postData = {
     type: "PLAY",
     value: bookmarkTime,
-  });
+  }
+
+  chrome.runtime.sendMessage({ type: "PLAY", data: postData });
+
+  // chrome.tabs.sendMessage(activeTab.id, {
+  //   type: "PLAY",
+  //   value: bookmarkTime,
+  // });
 };
 
 const setBookmarkAttributes = (src, eventListener, controlParentElement) => {
@@ -105,6 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   chrome.runtime.sendMessage({ action: "getTabUrl" }, function (response) {
     activeTab  = response.url;
+    console.log(activeTab);
     if(response.url){
         fetch("http://127.0.0.1:8000/api/notes/")
         .then((response) => {
@@ -132,4 +140,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
-
+// -------------------------OCR ------------
+document.getElementById('OCRBtn').addEventListener('click', function() {
+  // chrome.tabs.sendMessage(activeTab.id, {
+  //   type: "ocrBtn"
+  // });
+  chrome.runtime.sendMessage({ type: "ocrBtn" });
+});

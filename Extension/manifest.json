@@ -7,7 +7,11 @@
     "tabs",
     "https://*.youtube.com/*",
     "webNavigation",
-		"storage"
+		"storage",
+    "activeTab",
+    "windows",
+    "clipboardWrite",
+    "clipboardRead"
   ],
   "browser_action": {
     "default_title": "My Chrome Extension",
